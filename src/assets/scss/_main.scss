@@ -1,0 +1,131 @@
+body {
+  font-size: 1.6rem;
+  background-color: rgb(250, 254, 255);
+
+  * {
+    font-family: $ff-primary;
+  }
+
+  #app {
+    padding: 2rem;
+    max-width: 500px;
+    margin: 0 auto;
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 2.5rem 0;
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+      }
+
+      h1 {
+        font-size: 2rem;
+        text-transform: uppercase;
+      }
+
+      .search {
+        display: flex;
+        align-items: center;
+
+        input {
+          height: 3.2rem;
+          border: 1px solid #ccc;
+          border-radius: 0.4rem 0 0 0.4rem;
+          padding: 0 0.8rem;
+        }
+
+        button {
+          background-color: $primary-color;
+          border-radius: 0 0.4rem 0.4rem 0;
+          height: 3.2rem;
+          border: none;
+          padding: 0 1rem;
+          cursor: pointer;
+
+          &:hover {
+            filter: brightness(1.1);
+          }
+        }
+      }
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+
+      box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+
+      * {
+        font-size: 1.4rem;
+        color: $tc-primary;
+      }
+
+      th {
+        background: $primary-color;
+        text-align: left;
+        font-weight: normal;
+        padding: 1.5rem;
+
+        &:first-child {
+          border-top-left-radius: 0.4rem;
+        }
+
+        &:last-child {
+          border-top-right-radius: 0.4rem;
+        }
+      }
+
+      td {
+        padding: 1.5rem;
+        text-align: left;
+
+        &.user {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+
+          img {
+            width: 5rem;
+            height: 5rem;
+            object-fit: cover;
+            border-radius: 50%;
+          }
+
+          a {
+            text-decoration: none;
+          }
+
+          p {
+            font-weight: bold;
+          }
+        }
+
+        .remove {
+          background: none;
+          border: none;
+
+          color: red;
+        }
+      }
+
+      tr {
+        background: #eee;
+
+        &:nth-child(odd) {
+          background: #ddd;
+        }
+      }
+    }
+  }
+}
